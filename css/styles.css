@@ -1,6 +1,28 @@
+/* RESETS */
+
 * {
   box-sizing: border-box;
 }
+
+input {
+  width: 250px;
+  border: none;
+  border: 2px solid #483d8b;
+  padding: 0.5em 0 0.5em 0.5em;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.3em;
+  font-weight: 800;
+  color: aliceblue;
+}
+
+/* GENERAL STYLING */
 
 body {
   margin: 0;
@@ -8,23 +30,80 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "Abel", sans-serif;
+  background-color: #19151a;
 }
 
+/* BUTTONS */
+
+.btn {
+  border: 0;
+  outline: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  background-color: lightseagreen;
+  color: #fff;
+  border: 2px solid rebeccapurple;
+  cursor: pointer;
+  margin: 0 5px 0 5px;
+  transition: background-color 0.2s ease;
+  font-family: inherit;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: steelblue;
+}
+
+/* LAYOUT */
+
 .light-board {
-  display: flex;
-  min-height: 200px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+  gap: 20px;
+  min-height: 512px;
   margin-bottom: 2em;
 }
 .circle {
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: darkslateblue;
   margin: 3px 3px;
 }
 
 .bigSize {
-  width: 5px;
-  height: 5px;
+  transform: scale(1); /*class for changing size*/
+}
+
+/* Light controls*/
+
+.control-section {
+  margin-bottom: 1em;
+}
+
+.control-section-btn {
+  text-align: center;
+}
+
+/* ANIMATIONS */
+
+.red {
+  background-color: #c0392b;
+}
+
+.green {
+  background-color: #2ecc71;
+}
+
+.blue {
+  background-color: #64fcfe;
+}
+
+.yellow {
+  background-color: #f1c40f;
 }
