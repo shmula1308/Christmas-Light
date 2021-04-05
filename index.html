@@ -15,68 +15,15 @@
   </head>
   <body>
     <main class="light-board">
-      <div class="circle red bigSize"></div>
-      <div class="circle green"></div>
-      <div class="circle blue"></div>
-      <div class="circle yellow"></div>
-      <div class="circle red"></div>
-      <div class="circle green"></div>
-      <div class="circle blue"></div>
-      <div class="circle yellow"></div>
-
-      <div class="circle red"></div>
-      <div class="circle green"></div>
-      <div class="circle blue"></div>
-      <div class="circle yellow"></div>
-      <div class="circle red"></div>
-      <div class="circle green"></div>
-      <div class="circle blue"></div>
-      <div class="circle yellow"></div>
-
-      <div class="circle red"></div>
-      <div class="circle green"></div>
-      <div class="circle blue"></div>
-      <div class="circle yellow"></div>
-      <div class="circle red"></div>
-      <div class="circle green"></div>
-      <div class="circle blue"></div>
-      <div class="circle yellow"></div>
-
-      <div class="circle red"></div>
-      <div class="circle green"></div>
-      <div class="circle blue"></div>
-      <div class="circle yellow"></div>
-      <div class="circle red"></div>
-      <div class="circle green"></div>
-      <div class="circle blue"></div>
-      <div class="circle yellow"></div>
-
-      <div class="circle red"></div>
-      <div class="circle green"></div>
-      <div class="circle blue"></div>
-      <div class="circle yellow"></div>
-      <div class="circle red"></div>
-      <div class="circle green"></div>
-      <div class="circle blue"></div>
-      <div class="circle yellow"></div>
-
-      <div class="circle red"></div>
-      <div class="circle green"></div>
-      <div class="circle blue"></div>
-      <div class="circle yellow"></div>
-      <div class="circle red"></div>
-      <div class="circle green"></div>
-      <div class="circle blue"></div>
-      <div class="circle yellow"></div>
-
-      <div class="circle red"></div>
-      <div class="circle green"></div>
-      <div class="circle blue"></div>
-      <div class="circle yellow"></div>
-      <div class="circle red"></div>
-      <div class="circle green"></div>
-      <div class="circle blue"></div>
-      <div class="circle yellow"></div>
+      <div class="circle red"><input type="color" class="change-color"></div>
+      <div class="circle green"><input type="color" class="change-color"></div>
+      <div class="circle blue"><input type="color" class="change-color"></div>
+      <div class="circle yellow"><input type="color" class="change-color"></div>
+      <div class="circle red"><input type="color" class="change-color"></div>
+      <div class="circle green"><input type="color" class="change-color"></div>
+      <div class="circle blue"><input type="color" class="change-color"></div>
+      <div class="circle yellow"><input type="color" class="change-color"></div>
+     
     </main>
     <div class="light-controls">
       <div class="control-section control-section-btn">
@@ -85,36 +32,45 @@
       </div>
       <div class="control-section">
         <label for="speed-control" class="control-label">Speed: </label></br>
-        <input
-          type="number"
-          class="input-speed"
-          id="speed-control"
-          min="1"
-          max="5"
-          placeholder="enter value from 1 to 5"
-        />
+        <div class="input-btn-container">
+          <input
+            type="number"
+            class="input-speed"
+            id="speed-control"
+            min="1"
+            max="5"
+            placeholder="enter value from 1 to 5"
+          />
+          <button type="button" class="btn speed">RUN</button>
+        </div>
       </div>
       <div class="control-section">
         <label for="rows" class="control-label">Rows: </label></br>
-        <input
-          type="number"
-          class="input-rows"
-          id="rows"
-          min="1"
-          max="7"
-          placeholder="enter value from 1 to 7"
-        />
+        <div class="input-btn-container">
+          <input
+            type="number"
+            class="input-rows"
+            id="rows"
+            min="1"
+            max="7"
+            placeholder="enter value from 1 to 7"
+          />
+          <button type="button" class="btn row">RUN</button>
+        </div>
       </div>
       <div class="control-section">
         <label for="intensity" class="control-label">Intensity: </label></br>
-        <input
-          type="number"
-          class="input-intensity"
-          id="intensity"
-          min="1"
-          max="5"
-          placeholder="enter value from 1 to 5"
-        />
+        <div class="input-btn-container">
+          <input
+            type="number"
+            class="input-intensity"
+            id="intensity"
+            min="1"
+            max="5"
+            placeholder="enter value from 1 to 5"
+          />
+          <button type="button" class="btn intenisty">RUN</button>
+        </div>
       </div>
     </div>
   </body>

@@ -31,7 +31,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-family: "Abel", sans-serif;
   background-color: #19151a;
 }
@@ -58,12 +58,17 @@ body {
   background-color: steelblue;
 }
 
+.input-btn-container {
+  display: flex;
+}
+
 /* LAYOUT */
 
 .light-board {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  align-items: center;
+  grid-template-rows: repeat(8, 1fr);
+  align-items: baseline;
   gap: 20px;
   min-height: 512px;
   margin-bottom: 2em;
@@ -72,11 +77,23 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: darkslateblue;
+  background-color: #563260;
   margin: 3px 3px;
+  transition: all 1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.bigSize {
+.change-color {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.change-size {
   transform: scale(1); /*class for changing size*/
 }
 
@@ -94,16 +111,60 @@ body {
 
 .red {
   background-color: #c0392b;
+  animation: glow1 1s infinite;
 }
 
 .green {
   background-color: #2ecc71;
+  animation: glow2 1s infinite;
 }
 
 .blue {
   background-color: #64fcfe;
+  animation: glow3 1s infinite;
 }
 
 .yellow {
   background-color: #f1c40f;
+  animation: glow4 1s infinite;
+}
+
+@keyframes glow1 {
+  0%,
+  100% {
+    box-shadow: 0 0 20px 5px #c0392b;
+  }
+  50% {
+    box-shadow: none;
+  }
+}
+
+@keyframes glow2 {
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px #2ecc71;
+  }
+}
+
+@keyframes glow3 {
+  0%,
+  100% {
+    box-shadow: 0 0 20px 5px#64fcfe;
+  }
+  50% {
+    box-shadow: none;
+  }
+}
+
+@keyframes glow4 {
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px#64fcfe;
+  }
 }
