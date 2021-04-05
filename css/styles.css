@@ -13,6 +13,7 @@ input {
   border-bottom-left-radius: 5px;
   font-family: inherit;
   font-size: 1rem;
+  margin-right: 1em;
 }
 
 label {
@@ -72,6 +73,7 @@ body {
   gap: 20px;
   min-height: 512px;
   margin-bottom: 2em;
+  margin-top: 2.8em;
 }
 .circle {
   width: 50px;
@@ -91,6 +93,7 @@ body {
   height: 50px;
   border-radius: 50%;
   opacity: 0;
+  cursor: pointer;
 }
 
 .change-size {
@@ -165,6 +168,6 @@ body {
     box-shadow: none;
   }
   50% {
-    box-shadow: 0 0 20px 5px#64fcfe;
+    box-shadow: 0 0 20px 5px #f1c40f;
   }
 }

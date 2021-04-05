@@ -7,12 +7,16 @@ const intensityBtn = document.querySelector(".intensity");
 const speedInput = document.querySelector(".input-speed");
 const rowsInput = document.querySelector(".input-rows");
 const lightBoard = document.querySelector(".light-board");
+const colorChangeInput = document.getElementsByClassName("change-color");
 
 
 play.addEventListener('click',on);
 stop.addEventListener('click',off);
 speedBtn.addEventListener('click', changeSpeed);
 rowsBtn.addEventListener('click', changeRows);
+Array.from(colorChangeInput).forEach(colorInput => {
+    colorInput.addEventListener('input', changeColor)
+})
 
 
 
@@ -51,15 +55,29 @@ function changeRows() {
         let div = document.createElement('div');
         div.className = "circle";
         div.className += " " + color;
+        let colorInput = document.createElement('input');
+        colorInput.setAttribute('type','color');
+        colorInput.classList.add('change-color');
+        div.append(colorInput)
         df.append(div);
      })
    }
    lightBoard.innerHTML = "";
    lightBoard.append(df);
+
+   Array.from(colorChangeInput).forEach(colorInput => {
+    colorInput.addEventListener('input', changeColor)
+})
+
 }
 
 
-
+function changeColor(ev) {
+    let color = ev.target.value;
+    let light = ev.target.parentElement;
+    light.style.backgroundColor = color;
+    // light.style.boxShadow = `0 0 20px 5px ${color}`;
+}
 
 
 
