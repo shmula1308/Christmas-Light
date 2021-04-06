@@ -54,10 +54,9 @@ switcher.addEventListener('click', function() {
         colorSelector.active = false;
         Array.from(colorChangeInput).forEach(colorPicker => {
             colorPicker.style.display = 'none';
-            console.log(colorPicker)
         })
     } else {
-        selectedCircle.style.border = 'none'
+        // selectedCircle.style.border = 'none'
         colorSelector.active = true;
         Array.from(colorChangeInput).forEach(colorPicker => {
             colorPicker.style.display = 'inline-block';
@@ -69,8 +68,8 @@ switcher.addEventListener('click', function() {
         sizeDisplay.display = true;
         rangeContainer.style.display ='block';
      }else {
-        rangeContainer.style.display = 'none';
         sizeDisplay.display = false;
+        rangeContainer.style.display = 'none';
      }
      
 })
