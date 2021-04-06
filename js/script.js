@@ -8,10 +8,70 @@ const speedInput = document.querySelector(".input-speed");
 const rowsInput = document.querySelector(".input-rows");
 const lightBoard = document.querySelector(".light-board");
 const colorChangeInput = document.getElementsByClassName("change-color");
-const switcher = document.querySelector('.switcher');
+const switcher = document.querySelector('.switcher-container');
+const switchToggle = document.querySelector('.switcher');
+const sizeSlider = document.querySelector('.size-input');
+const rangeContainer = document.querySelector(".range-container");
 
-switcher.addEventListener('click', function(ev) {
-     this.classList.toggle('change-switch');
+let sizeValue = 10;
+let selectedCircle;
+
+let sizeDisplay = {
+    display: false
+}
+
+let colorSelector = {
+    active: true
+}
+
+lightBoard.addEventListener('click', selectLight)
+
+function selectLight(ev){
+    if(ev.target.className.includes('circle')) {
+        Array.from(lights).forEach(light => light.style.border = 'none')
+        selectedCircle = ev.target;
+        ev.target.style.border = '1px solid white';
+        ev.target.classList.add('change-size');
+        ev.target.style.transform = `scale(${Number(sizeValue)})`;
+    }
+    
+}
+
+function changeSize() {
+    selectedCircle.style.transform = `scale(${Number(sizeValue)})`;
+}
+ 
+sizeSlider.addEventListener('input', function(ev) {
+     sizeValue = ev.target.value;
+     changeSize();
+})
+
+
+switcher.addEventListener('click', function() {
+    switchToggle.classList.toggle('change-switch');
+    
+    if(colorSelector.active === true) {
+        colorSelector.active = false;
+        Array.from(colorChangeInput).forEach(colorPicker => {
+            colorPicker.style.display = 'none';
+            console.log(colorPicker)
+        })
+    } else {
+        selectedCircle.style.border = 'none'
+        colorSelector.active = true;
+        Array.from(colorChangeInput).forEach(colorPicker => {
+            colorPicker.style.display = 'inline-block';
+            console.log(colorPicker)
+        })
+    }
+
+     if(sizeDisplay.display === false) {
+        sizeDisplay.display = true;
+        rangeContainer.style.display ='block';
+     }else {
+        rangeContainer.style.display = 'none';
+        sizeDisplay.display = false;
+     }
      
 })
 

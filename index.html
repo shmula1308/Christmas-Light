@@ -15,31 +15,43 @@
   </head>
   <body>
     <main class="light-board">
-      <div class="circle red"><input type="color" class="change-color"></div>
-      <div class="circle green"><input type="color" class="change-color"></div>
-      <div class="circle blue"><input type="color" class="change-color"></div>
-      <div class="circle yellow"><input type="color" class="change-color"></div>
-      <div class="circle red"><input type="color" class="change-color"></div>
-      <div class="circle green"><input type="color" class="change-color"></div>
-      <div class="circle blue"><input type="color" class="change-color"></div>
-      <div class="circle yellow"><input type="color" class="change-color"></div>å
+      <div class="circle red">
+        <input type="color" class="change-color" />
+      </div>
+      <div class="circle green">
+        <input type="color" class="change-color" />
+      </div>
+      <div class="circle blue"><input type="color" class="change-color" /></div>
+      <div class="circle yellow">
+        <input type="color" class="change-color" />
+      </div>
+      <div class="circle red"><input type="color" class="change-color" /></div>
+      <div class="circle green">
+        <input type="color" class="change-color" />
+      </div>
+      <div class="circle blue"><input type="color" class="change-color" /></div>
+      <div class="circle yellow">
+        <input type="color" class="change-color" />
+      </div>
     </main>
     <div class="light-controls">
-      <div class="control-section control-section-btn">
+      <div class="on-of-control control-section-btn">
         <button type="button" class="on btn">ON</button>
         <button type="button" class="off btn">OFF</button>
       </div>
       <div class="switch-container">
         <label for="switcher">Change Color</label>
-        <button type="button" name="switcher" class="switcher-container btn"><span class="switcher"></span></button>
+        <button type="button" name="switcher" class="switcher-container btn">
+          <span class="switcher"></span>
+        </button>
         <label for="switcher">Change Size</label>
       </div>
-      <div class="range-container" >
-        <span>Press the light circle to change size</span>
-        <input type="range" class="size-input">
+      <div class="range-container">
+        <span>Click on the light if you want to change the size</span>
+        <input type="range" class="size-input" min="0" max="20" value="10" />
       </div>
       <div class="control-section">
-        <label for="speed-control" class="control-label">Speed: </label></br>
+        <label for="speed-control" class="control-label">Speed: </label>
         <div class="input-btn-container">
           <input
             type="number"
@@ -53,7 +65,7 @@
         </div>
       </div>
       <div class="control-section">
-        <label for="rows" class="control-label">Rows: </label></br>
+        <label for="rows" class="control-label">Rows: </label>
         <div class="input-btn-container">
           <input
             type="number"
