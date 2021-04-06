@@ -56,7 +56,6 @@ switcher.addEventListener('click', function() {
             colorPicker.style.display = 'none';
         })
     } else {
-        // selectedCircle.style.border = 'none'
         colorSelector.active = true;
         Array.from(colorChangeInput).forEach(colorPicker => {
             colorPicker.style.display = 'inline-block';
@@ -70,6 +69,7 @@ switcher.addEventListener('click', function() {
      }else {
         sizeDisplay.display = false;
         rangeContainer.style.display = 'none';
+        selectedCircle.style.border = 'none'
      }
      
 })
