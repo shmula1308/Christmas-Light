@@ -8,6 +8,12 @@ const speedInput = document.querySelector(".input-speed");
 const rowsInput = document.querySelector(".input-rows");
 const lightBoard = document.querySelector(".light-board");
 const colorChangeInput = document.getElementsByClassName("change-color");
+const switcher = document.querySelector('.switcher');
+
+switcher.addEventListener('click', function(ev) {
+     this.classList.toggle('change-switch');
+     
+})
 
 
 play.addEventListener('click',on);
